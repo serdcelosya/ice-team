@@ -1,2 +1,8 @@
-@import './common';
-@import './example';
+// UTILS
+@import './utils/main';
+// BASE
+@import './base/main';
+// COMPONENTS
+@import './components/main';
+// LAYOUT
+@import './layout/main';
