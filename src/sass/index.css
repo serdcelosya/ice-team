@@ -1,0 +1,94 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+:root {
+  --bgc-body: #84a178;
+  --bgc-product-icecream: #aec6a5;
+  --bgc-product-icecoffee: #efd478;
+  --bgc-product-milkshakes: #d6936d;
+  --bgc-ingredients-product: #9cbe8f;
+  --bgc-chekbox-icecream: #96af8c;
+  --bgc-modal-input: rgba(248, 210, 78, 0.1);
+  --text-black: #131313;
+  --text-whte: #fcfcfc;
+  --text-footer-address: #7a7a7a;
+  --btn-text-color: #000000;
+  --btn-color-default: #f8d24e;
+  --btn-color-hover-focus: #0a8817;
+  --btn-color-disabled: #ababab;
+}
+
+body {
+  background-color: var(--bgc-body);
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  color: var(--text-black);
+}
+
+.container {
+  width: 100%;
+  margin: 0px auto;
+  padding: 0 20px;
+}
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding: 0 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    padding: 0 16px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  margin: -1px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.custom {
+  background-color: black;
+}/*# sourceMappingURL=index.css.map */
