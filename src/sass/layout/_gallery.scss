@@ -4,6 +4,42 @@ img {
   height: auto;
 }
 
-.gallry--layout {
-  z-index: 99;
+.gallery {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.gallery__item {
+  @media screen and (max-width: 767px) {
+    width: 100%;
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1600px;
+  }
+}
+
+.gallery {
+  @media screen and (min-width: 768px) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+.gallery--layout {
+  z-index: 2;
+}
+
+// .container-gallery {
+//   width: 100%;
+// }
+
+@media screen and (min-width: 768px) {
+  .container-gallery {
+    width: 100%;
+    padding: 0 32px;
+  }
 }
