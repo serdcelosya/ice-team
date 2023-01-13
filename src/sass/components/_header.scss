@@ -14,17 +14,17 @@
 
   .logo {
     &__image {
-      width: 40px;
-      height: 47px;
+      width: 37px;
+      height: 40px;
   
       @media screen and (min-width: 768px) {
-        width: 54px;
-        height: 63px;
+        width: 44px;
+        height: 48px;
       }
   
       @media screen and (min-width: 1200px) {
         width: 60px;
-        height: 70px;
+        height: 65px;
       }
     }
   }
