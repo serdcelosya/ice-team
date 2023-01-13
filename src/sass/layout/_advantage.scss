@@ -30,7 +30,7 @@
   }
 }
 
-.adventages-item {
+.adventages-list__item {
   max-width: 230px;
   @media screen and (min-width: 768px) {
     max-width: 152px;
@@ -72,7 +72,7 @@
     }
   }
 }
-.adventages-weight-icon {
+.adventages-list__item--second {
   &::before {
     content: '';
     display: inline-block;
@@ -107,7 +107,7 @@
     }
   }
 }
-.adventages-icecream-icon {
+.adventages-list__item--third {
   &::before {
     content: '';
     display: inline-block;
@@ -143,7 +143,8 @@
   }
 }
 
-.adventages-subtitle {
+.adventages-list__subtitle {
+  display: block;
   margin-bottom: 16px;
   font-weight: 700;
   font-size: 36px;
@@ -163,7 +164,7 @@
   }
 }
 
-.adventages-text {
+.adventages-list__text {
   font-weight: 700;
   font-size: 12px;
   line-height: calc(20 / 12);
