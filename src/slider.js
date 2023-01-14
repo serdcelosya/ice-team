@@ -5,6 +5,6 @@ $('.one-time').slick({
   slidesToShow: 1,
   adaptiveHeight: true,
   arrows: true,
-  autoplay: true,
+  // autoplay: true,
   autoplaySpeed: 2000,
 });
