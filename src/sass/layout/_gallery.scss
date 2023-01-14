@@ -4,6 +4,11 @@ img {
   height: auto;
 }
 
+.gallry--layout {
+  position: absolute;
+  z-index: 2;
+}
+
 .gallery__item {
   @media screen and (max-width: 767px) {
     width: 100%;
@@ -24,22 +29,11 @@ img {
 }
 
 .gallery__photo {
-  //   padding-left: 20px;
-  //   padding-right: 20px;
-
-  //   @media screen and (min-width: 768px) {
-  //     padding-left: 32px;
-  //     padding-right: 32px;
-  //   }
   @media screen and (min-width: 1200px) {
     margin: 0 auto;
     width: 1013px;
     border-radius: 24px;
   }
-}
-
-.gallery--layout {
-  z-index: 2;
 }
 
 .slick-next,
