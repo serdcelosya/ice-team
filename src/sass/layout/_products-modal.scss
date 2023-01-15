@@ -1,0 +1,388 @@
+.products-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+
+  opacity: 1;
+  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  overflow-y: scroll;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.products-backdrop.is-hidden .products-modal {
+  transform: translate(-50%, -50%) scale(0.8);
+}
+
+.products-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  padding: 28px 20px;
+  width: 280px;
+
+  height: 100%;
+  background-color: #fcfcfc;
+  border: 2px solid #f8d24e;
+  border-radius: 10px;
+
+  overflow: auto;
+}
+
+.products-modal-close {
+  padding: 0;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  background-color: inherit;
+  border: none;
+}
+
+.products-modal-icon {
+  width: 12px;
+  height: 12px;
+  fill: #131313;
+}
+
+@media screen and (min-width: 768px) {
+  .products-modal {
+    padding: 32px 40px;
+    width: 568px;
+  }
+  .products-modal-close {
+    width: 24px;
+    height: 24px;
+  }
+  .products-modal-icon {
+    width: 15px;
+    height: 15px;
+    fill: #131313;
+  }
+}
+
+.products-modal-title {
+  font-family: 'Seymour One';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+  align-items: center;
+  text-align: center;
+}
+
+.products-modal-title::after {
+  position: absolute;
+  content: '';
+  background-image: url('..//..//images/products/chocolate_ice-cream.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 132px;
+  height: 132px;
+  top: 104px;
+  left: 74px;
+}
+
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .products-modal-title::after {
+    background-image: url('..//..//images/products/chocolate_ice-cream@2x.png');
+  }
+}
+
+.products-modal-title.products-title-second::after {
+  background-image: url('..//..//images/products/coffee_modal.png');
+}
+
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .products-modal-title.products-title-second::after {
+    background-image: url('..//..//images/products/coffee_modal@2x.png');
+  }
+}
+
+.products-modal-title.products-title-third::after {
+  background-image: url('..//..//images/products/milkshake_modal.png');
+}
+
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .products-modal-title.products-title-third::after {
+    background-image: url('..//..//images/products/milkshake_modal@2x.png');
+  }
+}
+
+.products-modal-title::before {
+  position: absolute;
+  content: '';
+  background: linear-gradient(
+      0deg,
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+  width: 132px;
+  height: 132px;
+  top: 111px;
+  left: 74px;
+  border-radius: 50%;
+}
+
+.products-modal-title.products-title-second::before {
+  background: linear-gradient(
+      0deg,
+      rgba(248, 210, 78, 0.7),
+      rgba(248, 210, 78, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.26027px 19.726px rgb(248 210 78 / 70%);
+}
+
+.products-modal-title.products-title-third::before {
+  background: linear-gradient(
+      0deg,
+      rgba(213, 117, 63, 0.7),
+      rgba(213, 117, 63, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (min-width: 768px) {
+  .products-modal-title::after {
+    top: 84px;
+    left: 218px;
+  }
+  .products-modal-title::before {
+    top: 91px;
+    left: 218px;
+  }
+}
+
+.products-modal-list {
+  margin-top: 181px;
+  display: flex;
+  justify-content: center;
+  gap: 9px;
+}
+.products-modal-item {
+  width: 53px;
+  height: 72px;
+  border: 2px solid #9cbe8f;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.2;
+}
+
+.products-modal-item.products-item-second {
+  border: 2px solid #efd478;
+}
+
+.products-modal-item.products-item-third {
+  border: 2px solid #d6936d;
+}
+.products-item-value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: -8px;
+  margin-bottom: 8px;
+
+  width: 43px;
+  height: 43px;
+  background-color: #9cbe8f;
+  border: 2px solid #9cbe8f;
+  box-shadow: 0px 6px 20px rgba(10, 136, 23, 0.25);
+  border-radius: 50%;
+
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 2.8;
+}
+
+.products-item-value.products-value-second {
+  background-color: #efd478;
+  border: 2px solid #efd478;
+  box-shadow: 0px 6px 20px rgb(248 210 78 / 70%);
+}
+
+.products-item-value.products-value-third {
+  background-color: #d6936d;
+  border: 2px solid #d6936d;
+  box-shadow: 0px 6px 20px rgb(213 117 63 / 70%);
+}
+
+@media screen and (min-width: 768px) {
+  .products-modal-list {
+    margin-top: 187px;
+    gap: 20px;
+  }
+  .products-modal-item {
+    width: 65px;
+    height: 90px;
+    font-size: 12px;
+    line-height: 1.25;
+  }
+  .products-item-value {
+    margin-top: -14px;
+    margin-bottom: 6px;
+    width: 53px;
+    height: 53px;
+    font-size: 12px;
+    line-height: 2.33;
+  }
+}
+
+.products-ingredients-title {
+  margin-top: 40px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.4;
+  text-align: center;
+}
+.products-ingredients-list {
+  margin-top: 24px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.products-ingredients-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.products-ingredients-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.76;
+  letter-spacing: 0.04em;
+}
+
+@media screen and (min-width: 768px) {
+  .products-ingredients-title {
+    margin-top: 48px;
+  }
+  .products-ingredients-list {
+    margin-bottom: 48px;
+  }
+}
+
+.products-modal-input {
+  margin-bottom: 12px;
+  padding: 11px;
+  width: 100%;
+  height: 42px;
+  background-color: rgba(248, 210, 78, 0.1);
+  border: 1px solid #84a178;
+  border-radius: 10px;
+}
+.products-modal-textarea {
+  margin-bottom: 24px;
+  padding: 11px;
+  resize: none;
+  height: 84px;
+  width: 100%;
+  background-color: rgba(248, 210, 78, 0.1);
+  border: 1px solid #84a178;
+  border-radius: 10px;
+}
+
+.products-modal-input.products-input-second,
+.products-modal-textarea.products-textarea-second {
+  border: 1px solid #efd478;
+}
+
+.products-modal-input.products-input-third,
+.products-modal-textarea.products-textarea-third {
+  border: 1px solid #d6936d;
+}
+
+.products-modal-input::placeholder,
+.products-modal-textarea::placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #131313;
+}
+
+.products-modal-btn {
+  display: block;
+  margin: 0 auto;
+  width: 132px;
+  height: 42px;
+  padding: 12px 34px;
+  cursor: pointer;
+  background: #f8d24e;
+  border-radius: 10px;
+  border: none;
+
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.21;
+  text-align: center;
+}
+
+.products-modal-btn:hover {
+  background-color: #0a8817;
+}
+
+.products-modal-btn:focus {
+  color: #fff;
+  background-color: #0a8817;
+}
+
+@media screen and (min-width: 768px) {
+  .products-modal-input {
+    display: block;
+    width: 368px;
+    margin-bottom: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 11px 16px;
+  }
+  .products-modal-textarea {
+    display: block;
+    width: 368px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 11px 16px;
+    margin-bottom: 32px;
+  }
+  .products-modal-btn {
+    width: 121px;
+  }
+}
