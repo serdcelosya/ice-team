@@ -1,0 +1,108 @@
+@import '../utils/variables';
+
+.contacts__item {
+    background-color: var(--text-whte);
+    margin-bottom: 16px;
+    border-radius: 24px;
+    padding: 40px 32px 24px 32px;
+
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+}
+
+.contacts__type-establishment {
+    margin-bottom: 20px;
+    padding: 4px 22px;
+    display: inline-block;
+
+    color: var(--text-black);
+    background-color: var(--btn-color-default);
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.2;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    border-radius: 4px;
+}
+
+.contacts__address,
+.contacts__schedule {
+    position: relative;
+    
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+
+    &::after {
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 1px;
+        display: block;
+        background: #E1E1E1;
+        bottom: 0;
+        left: 0;
+    }
+}
+
+.contacts__address-city {
+    margin-bottom: 8px;
+
+    color: var(--text-black);
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.86;
+    letter-spacing: 0.04em;
+    font-style: normal;
+}
+
+.contacts__address-street {
+    color: var(--bgc-product-milkshakes);
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.86;
+    letter-spacing: 0.04em;
+    font-style: normal;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}
+
+.contacts__schedule-item:first-child {
+    margin-bottom: 8px;
+}
+
+.contacts__schedule-day {
+    color: var(--text-black);
+    
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.86;
+}
+
+.contacts__schedule-time {
+    color: var(--btn-color-disabled);
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.86;
+}
+
+.contacts__communication-item:first-child {
+    margin-bottom: 8px;
+}
+
+.contacts__communication-tel,
+.contacts__communication-mail {
+    color: var(--text-black);
+    
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 160%;
+}
