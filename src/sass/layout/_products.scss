@@ -38,17 +38,9 @@
   margin-bottom: 145px;
 }
 
-@media screen and (min-width: 480px) {
-  .products {
-    max-width: 480px;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .products {
-    max-width: 768px;
     background-image: url('..//../images/background_tablet.jpg');
-    background-position: -23px -115px;
   }
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
@@ -69,9 +61,7 @@
 
 @media screen and (min-width: 1200px) {
   .products {
-    max-width: 1200px;
     background-image: url('..//../images/background_desktop.jpg');
-    background-position: -20px -243px;
   }
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
