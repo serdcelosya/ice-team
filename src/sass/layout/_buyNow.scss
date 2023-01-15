@@ -1,0 +1,161 @@
+.backdrop-order {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+
+.modal-order {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+  height: 991px;
+  background: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  padding: 28px;
+  max-width: 280px;
+  @media screen and (min-width: 480px) {
+    width: 280px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 568px;
+    height: 644px;
+  }
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.button-close-order {
+  position: absolute;
+  top: 12px;
+
+  right: 12px;
+  background-color: transparent;
+
+  cursor: pointer;
+  border: none;
+  width: 20px;
+  height: 20px;
+
+  &__icon {
+    width: 100%;
+    height: 100%;
+    fill: #131313;
+  }
+  &__icon:hover,
+  &__icon:focus {
+    fill: #131313;
+  }
+}
+
+// .form-order {
+//   display: flex;
+// }
+
+.order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 82px;
+  box-sizing: border-box;
+  margin-bottom: 31px;
+}
+
+.order__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 132px;
+  height: 136px;
+  border: 2px solid #96af8c;
+  border-radius: 15px;
+}
+
+.order__title {
+  font-weight: 400;
+  font-family: 'Seymour One';
+  text-align: center;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  letter-spacing: 0.04em;
+  margin-bottom: 83px;
+}
+
+.order__text {
+  text-align: center;
+  font-size: 16px;
+  line-height: calc(20 / 16);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 83px;
+  padding-top: 96px;
+}
+
+.order__coffee {
+  border: 2px solid #efd478;
+}
+
+.order__milkshakes {
+  border: 2px solid #d6936d;
+}
+
+.order-input {
+  margin: 0 auto;
+}
+.order-name,
+.order-phone {
+  margin-bottom: 12px;
+}
+
+.order-phone__input,
+.order-name__input {
+  min-width: 100%;
+  height: 32px;
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid #84a178;
+  border-radius: 10px;
+  @media screen and (mix-width: 768px) {
+    width: 368px;
+    height: 42px;
+  }
+}
+
+.textarea-order__text {
+  resize: none;
+  width: 100%;
+  height: 65px;
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid #84a178;
+  border-radius: 10px;
+}
+
+.btn-buynow {
+  text-align: center;
+}
+.button-buy {
+  display: inline-block;
+  margin-top: 26px;
+
+  padding: 12px 34px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--btn-color-default);
+  color: var(--btn-text-color);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
