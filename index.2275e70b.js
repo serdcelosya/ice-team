@@ -1,0 +1,2 @@
+!function(){var o={openModalBtns:document.querySelectorAll("[data-modal-buy-now-open]"),closeModalBtn:document.querySelector("[data-modal-buy-now-close]"),modal:document.querySelector("[data-modal-buy-now]")};function e(){document.body.classList.toggle("modal-open"),o.modal.classList.toggle("is-hidden")}o.openModalBtns.forEach((function(o){return o.addEventListener("click",e)})),o.closeModalBtn.addEventListener("click",e)}();
+//# sourceMappingURL=index.2275e70b.js.map
