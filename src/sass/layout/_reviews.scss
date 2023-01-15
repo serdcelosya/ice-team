@@ -3,6 +3,46 @@
   padding-top: 80px;
   padding-bottom: 60px;
   background-image: url('/src/images/backgroud_mobile.jpg');
+
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+      & {
+        background-image: 
+          url('/src/images/backgroud_mobile@2x.jpg');
+      }
+    }
+  
+    @include tablet {
+      background-image: 
+        url('/src/images/background_tablet.jpg');
+  
+      @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        & {
+          background-image: 
+            url('/src/images/background_tablet@2x.jpg');
+        }
+      }
+    }
+  
+    @include desktop {
+      background-image: 
+        url('/src/images/background_desktop.jpg');
+  
+      @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        & {
+          background-image: 
+            url('/src/images/backgroud_desktop@2x.jpg');
+        }
+      }
+    }
+
+
 }
 
 .customer-reviews_list {
@@ -11,15 +51,30 @@
 }
 
 .customer-reviews_img {
-  display: inline-block;
+  padding-top: 178px;
+  margin: auto;
+
+  @media screen and (max-width: 480px) {
+    padding-top: 256px;
+  }
+  
+ @media screen and (min-width: 768px) {
+    padding-top: 283px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 464px;
+  }
+
 }
+
 
 .customer-reviews_text {
   font-weight: 400;
   font-size: 12px;
   line-height: 2.5;
   color: #fcfcfc;
-  background-color: #84a178;
+  background-color: #84a178 ; 
   border-radius: 10px;
   margin-top: 32px;
   margin-bottom: 32px;
@@ -59,7 +114,7 @@
 
 .slick-dots li button:before {
   font-family: 'slick';
-  font-size: 6px;
+  font-size: 12px;
   line-height: 20px;
   position: absolute;
   top: 0;
