@@ -1,0 +1,206 @@
+.about {
+  padding-top: 60px;
+  & > .container {
+    position: relative;
+  }
+}
+
+.about-lable {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.22;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  color: var(--text-whte);
+  @include tablet {
+    font-weight: 800;
+    font-size: 22px;
+  }
+  @include desktop {
+    font-size: 30px;
+  }
+}
+.about-title {
+  width: 200px;
+  margin: 0 auto;
+  font-family: 'Seymour One', sans-serif;
+  font-size: 30px;
+  line-height: 1.27;
+  text-align: center;
+  margin-bottom: 32px;
+  text-transform: uppercase;
+
+  color: var(--text-whte);
+  @include tel {
+    margin: 0 auto;
+    margin-bottom: 32px;
+  }
+  @include tablet {
+    width: 100%;
+    font-size: 34px;
+    letter-spacing: 0.06em;
+    margin: 0 auto;
+    margin-bottom: 80px;
+  }
+  @include desktop {
+    font-size: 36px;
+    line-height: 1.25;
+    margin-bottom: 172px;
+  }
+}
+.about-img {
+  width: 279px;
+  height: 300px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  border-radius: 140px;
+  background-color: #d9d9d9;
+  background-image: url(../images/cow/cow_mobile.png),
+    linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7));
+  @include retina {
+    background-image: url(../images/cow/cow_mobile@2x.png),
+      linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7));
+  }
+  background-repeat: no-repeat;
+  background-position: 0 22px, 0 0;
+  background-size: contain;
+  box-shadow: 0px 4.48583px 16.8218px rgba(153, 114, 23, 0.25);
+  @include tablet {
+    width: 330px;
+    height: 356px;
+    margin-bottom: 0;
+    border-radius: 165px;
+    background-image: url(../images/cow/cow_tablet.png),
+      linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7));
+    @include retina {
+      background-image: url(../images/cow/cow_tablet@2x.png),
+        linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7));
+    }
+    background-position: 0 26px, 0 0;
+    position: absolute;
+    top: 154px;
+    left: 32px;
+  }
+  @include desktop {
+    width: 491px;
+    height: 529px;
+    margin-bottom: 0;
+    border-radius: 250px;
+    background-image: url(../images/cow/cow_desktop.png),
+      linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7));
+    @include retina {
+      background-image: url(../images/cow/cow_desktop@2x.png),
+        linear-gradient(0deg, rgba(248, 210, 78, 0.7), rgba(248, 210, 78, 0.7));
+    }
+    background-position: 0 39px, 0 0;
+    position: absolute;
+    top: 176px;
+    left: 16px;
+  }
+}
+.about-content {
+  padding-right: 50px;
+  padding-left: 50px;
+  margin-bottom: 10px;
+  @include tel {
+    padding-right: 0;
+    padding-left: 0;
+    width: 220px;
+    margin: 0 auto;
+    margin-bottom: 24px;
+  }
+  @include tablet {
+    width: 334px;
+    margin: 0;
+    margin-left: 368px;
+    // margin-left: 400px;
+    margin-bottom: 32px;
+  }
+  @include desktop {
+    width: 463px;
+    margin-bottom: 54px;
+    margin-left: 616px;
+  }
+}
+.about-text {
+  font-size: 12px;
+  line-height: 1.62;
+  text-align: center;
+  &:first-child {
+    margin-bottom: 4px;
+  }
+  color: var(--text-whte);
+  @include tablet {
+    text-align: left;
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.94;
+  }
+}
+.text-ice {
+  line-height: 1.76;
+
+  @include desktop {
+    font-size: 16px;
+  }
+}
+
+.text-mood {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @include tablet {
+    line-height: 1.94;
+  }
+}
+.about-btn {
+  display: flex;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 12px 34px;
+  min-width: 164px;
+  height: 42px;
+  background: var(--btn-color-default);
+  font-family: 'Montserrat';
+
+  font-weight: 600;
+
+  line-height: 1.29;
+
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  color: var(--text-black);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    background-color: var(--btn-color-hover-focus);
+  }
+  &:focus {
+    background-color: var(--btn-color-hover-focus);
+    color: var(--text-whte);
+  }
+  &:visited {
+    background-color: var(--btn-color-default);
+  }
+  @include tablet {
+    margin: 0;
+    margin-left: 368px;
+  }
+  @include desktop {
+    margin-left: 616px;
+  }
+}
+.about__icon {
+  fill: currentColor;
+  width: 12px;
+  height: 12px;
+}
