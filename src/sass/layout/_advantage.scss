@@ -3,14 +3,14 @@
   padding-top: 50px;
   padding-bottom: 64px;
 
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width:480px) {
     padding-top: 60px;
     padding-bottom: 204px;
   }
 
   @media screen and (min-width: 768px) {
     padding-top: 80px;
-    padding-bottom: 60px;
+    padding-bottom: 204px;
   }
   @media screen and (min-width: 1200px) {
     padding-top: 146px;
@@ -26,7 +26,7 @@
   justify-content: center;
   text-align: center;
   gap: 28px;
-  
+
   @media screen and(min-width:480px) {
     gap: 32px;
   }
