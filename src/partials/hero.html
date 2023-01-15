@@ -1,0 +1,140 @@
+<section class="hero">
+  <div class="container hero__container">
+    <h1 class="hero__title">
+      ice cream made with <span class="hero__title--text">passion</span>
+    </h1>
+    <ul class="hero__list-menu">
+      <li class="hero__list-text list">
+        <a href="#products" class="hero__link hero__link--text">Products</a>
+      </li>
+      <li class="hero__list-text list">
+        <a href="#about" class="hero__link hero__link--question"
+          >How it’s made?</a
+        >
+      </li>
+    </ul>
+    <div class="hero__text-wrapper">
+      <p class="hero__text">
+        <span class="hero__number">16</span><br />
+        cafes
+      </p>
+      <p class="hero__text">
+        <span class="hero__number">23</span><br />
+        food trucks
+      </p>
+    </div>
+    <div class="hero__wrapper wrapper">
+      <picture>
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+            ./images/plate_desktop.png    225w,
+            ./images/plate_desktop@2x.png 450w
+          "
+          sizes="225px"
+          type="image/png"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="
+            ./images/plate_tablet.png    152w,
+            ./images/plate_tablet@2x.png 304w
+          "
+          sizes="152px"
+          type="image/png"
+        />
+        <img
+          class="hero__img-plate"
+          src="./images/plate_tablet.png"
+          alt="ice-cream plate"
+          height="152"
+          loading="lazy"
+        />
+      </picture>
+      <!-- <div class="wrapper__description"> -->
+        <p class="wrapper__description-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et
+        </p>
+        <!-- <svg class="wrapper__description-icon" width="40" height="16">
+          <use href="./images/icons.svg#icon-arrow"></use>
+        </svg> -->
+      <!-- </div> -->
+      <picture>
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+            ./images/cone_desktop.png    456w,
+            ./images/cone_desktop@2x.png 912w
+          "
+          sizes="456px"
+          type="image/png"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="
+            ./images/cone_tablet.png    268w,
+            ./images/cone_tablet@2x.png 536w
+          "
+          sizes="268px"
+          type="image/png"
+        />
+
+        <source
+          media="(min-width: 320px)"
+          srcset="
+            ./images/cone_mobile.png 177w,
+            ./images/cone_mobile@2x.png 354w
+          "
+          sizes="177px"
+          type="image/png"
+        />
+
+        <img
+        class="hero__img-icecream"
+        src="./images/cone_mobile.png"
+        alt="ice-cream"
+        height="217"
+        loading="lazy"
+      />
+      </picture>
+
+      <picture>
+        <source
+          media="(min-width: 1200px)"
+          srcset="
+            ./images/dots_desktop.png 1200w,
+            ./images/dots_desktop@2x.png 2400w
+          "
+          sizes="1200px"
+          type="image/png"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="
+          ./images/dots_tablet.png   768w,
+          ./images/dots_tablet@2x.png 1536w
+          "
+          sizes="768px"
+          type="image/png"
+        />
+        <source
+          media="(min-width: 320px)"
+          srcset="
+          ./images/dots_mobile.png 320w,
+          ./images/dots_mobile@2x.png 640w
+          "
+          sizes="320px"
+          type="image/png"
+        />
+        <img
+          class="hero__dots"
+          src="./images/dots_mobile.png"
+          alt="ice-cream"
+          height="50"
+          loading="lazy"
+        />
+      </picture>
+    </div>
+  </div>
+</section>

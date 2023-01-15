@@ -8,10 +8,21 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Seymour+One&display=swap"
       rel="stylesheet"
     />
-    <!-- Base style -->
-    <link rel="stylesheet" href="./sass/index.scss" />
+
+   
     <!-- Base JS -->
     <script type="module" src="./index.js"></script>
+
+    <!--  slick css -->
+    
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+     
+    <!-- Base style -->
+    <link rel="stylesheet" href="./sass/index.scss" />
+    
   </head>
   <body>
     <!-- HEADER -->
@@ -29,11 +40,36 @@
       <!-- GALLERY -->
       <include src="./partials/gallery.html"></include>
       <!-- CUSTOMER REVIEWS -->
-      <include src="./partials/reviews.html"></include>
+      <include src="./partials/customer-reviews.html"></include>
       <!-- CONTACTS -->
       <include src="./partials/contacts.html"></include>
     </main>
     <!-- FOOTER -->
     <include src="./partials/footer.html"></include>
-  </body>
+    <script src="./mobile-menu.js"></script>
+    <script src="./header-button.js"></script>
+
+    
+
+    <!-- slick jQuery-->
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+
+
+    <!-- slick js -->
+    <script
+      type="text/javascript"
+      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="./slider.js" type="module"></script>
+    <script src="./reviews.js" type="module"></script>
+
+    
+    </body>
 </html>
