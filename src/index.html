@@ -3,14 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
+    <title>&#127846 Ice cream</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Seymour+One&display=swap"
       rel="stylesheet"
     />
 
-    <!-- Base style -->
-    <link rel="stylesheet" href="./sass/index.scss" />
     <!-- Base JS -->
     <script type="module" src="./index.js"></script>
 
@@ -28,6 +26,9 @@
       type="text/css"
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
     />
+
+    <!-- Base style -->
+    <link rel="stylesheet" href="./sass/index.scss" />
   </head>
   <body>
     <!-- HEADER -->
@@ -71,5 +72,14 @@
     ></script>
     <script src="./slider.js" type="module"></script>
     <script src="./reviews.js" type="module"></script>
+    <include src="./partials/buyNow.html"></include>
+    <!-- about-modal -->
+    <include src="./partials/about-modal.html"></include>
+    <script src="./about-modal.js"></script>
+
+    <!-- Buy Now -->
+
+    <script src="./buyNow.js"></script>
+    <include src="./partials/buyNow.html"></include>
   </body>
 </html>

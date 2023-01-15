@@ -5,5 +5,6 @@ $('.reviews-js').slick({
   slidesToShow: 1,
   adaptiveHeight: true,
   arrows: false,
-  //autoplay: true,
+  autoplay: true,
+  autoplaySpeed: 2000,
 });
