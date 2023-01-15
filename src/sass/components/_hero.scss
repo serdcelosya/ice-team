@@ -186,10 +186,34 @@
 //     flex-direction: column;
 // }
 
+// .wrapper__description-icon {
+//    fill: var(--text-whte);
+//    background-size: cover
 
+// }
+
+.hero__img-icecream {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  left: 28%;
+
+  @media screen and (min-width: 768px) {
+    left: 408px;
+    bottom: 0;
+    width: 258px;
+    height: 329px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    left: 652px;
+    width: 456px;
+    height: 560px;
+  }
+}
 
 .wrapper__description-text {
-    position: relative;
+  position: relative;
   width: 150px;
   font-size: 12px;
   line-height: calc(17 / 12);
@@ -199,63 +223,51 @@
     margin-bottom: 20px;
     margin-top: 46px;
 
-  @media screen and (min-width: 1200px) {
-
-  margin-bottom: 27px;
-  margin-top: 65px;
-}
-}
-}
-
-.wrapper__description-text::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 97px;
-    width: 40px;
-    height: 16px;
-    background-image: url('../images/icons.svg');
-}
-
-.hero__img-plate {
-  margin-right: 32px;
-
-  @media screen and (min-width: 1200px) {
-    .hero__img-plate {
-      margin-right: 16px;
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 27px;
+      margin-top: 65px;
     }
   }
 }
 
-// .wrapper__description-icon {
-//    fill: var(--text-whte);
-//    background-size: cover
-   
-// }
-
-.hero__img-icecream {
-    position: absolute;
-    z-index: 2;
-    bottom: 0;
-    left: 28%;
-
-    @media screen and (min-width: 768px) {
-        left: 408px;
-        bottom: 0;
-        width: 258px;
-        height: 329px;
-    }
-
-    @media screen and (min-width: 1200px) {
-        left: 652px;
-        width: 456px;
-        height: 560px;
-        margin-bottom: -67px
-    }
+.wrapper__description-text::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 97px;
+  width: 40px;
+  height: 16px;
+  background-image: url('..//../images/arrow1.svg');
 }
-.hero__dots {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+
+.hero__wrapper {
+  @media screen and (min-width: 768px) {
+  margin-right: 32px;
+}
+}
+.hero__img-plate {
+  padding: 0;
+  margin-right: 32px;
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 16px;
+  }
+}
+.dots {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
 }
