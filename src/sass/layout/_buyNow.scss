@@ -22,11 +22,14 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   padding: 28px;
-  width: 95%;
-  height: 98%;
+
   overflow: auto;
 
   border: 2px solid #f8d24e;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    max-width: 280px;
+    height: 98%;
+  }
 
   @media screen and (min-width: 480px) {
     max-width: 280px;
@@ -89,6 +92,7 @@
   @media screen and (min-width: 768px) {
     flex-direction: row;
     gap: 32px;
+    margin-bottom: 40px;
   }
 }
 
@@ -212,7 +216,7 @@
 
   display: flex;
   justify-content: center;
-  width: 135px;
+  width: 132px;
   height: 135px;
 
   border-radius: 15px;
@@ -257,6 +261,9 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  @media screen and (min-width: 768px) {
+    gap: 16px;
+  }
 }
 
 .order-phone__input,
@@ -305,6 +312,11 @@
     padding-right: 16px;
     padding-top: 10px;
   }
+  &:hover,
+  &:focus {
+    border: 1px solid #84a178;
+    outline: transparent;
+  }
 }
 
 .btn-buynow {
@@ -325,4 +337,8 @@
   cursor: pointer;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 768px) {
+    margin-top: 32px;
+  }
 }
