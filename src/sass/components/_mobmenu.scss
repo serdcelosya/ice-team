@@ -41,6 +41,8 @@
 
 .menu-container.is-open {
   transform: translateX(0);
+  overflow: hidden;
+  position: fixed;
 }
 
 .mobile__container {
