@@ -13,12 +13,12 @@
   pointer-events: none;
 }
 
-.backdrop.is-hidden .modal {
+.backdrop.is-hidden .modal-franchise {
   // transform: translate(100%);
   transform: translate(-50%, -50%);
 }
 
-.modal {
+.modal-franchise {
   position: absolute;
   padding: 32px 60px;
   width: 568px;
