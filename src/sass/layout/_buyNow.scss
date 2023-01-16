@@ -30,10 +30,10 @@
   }
 }
 
-.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
+// .is-hidden {
+//   opacity: 0;
+//   pointer-events: none;
+// }
 
 .button-close-order {
   position: absolute;
@@ -102,12 +102,108 @@
   padding-top: 96px;
 }
 
-.order__coffee {
+.order__item--coffee {
   border: 2px solid #efd478;
 }
 
-.order__milkshakes {
+.order__item--milkshakes {
   border: 2px solid #d6936d;
+}
+
+.order__cream::before {
+  content: '';
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 132px;
+  height: 132px;
+  position: absolute;
+  top: -50%;
+  left: -2%;
+  z-index: 10;
+  background-image: url('..//..//images/products/ice-cream_tablet_mob.png');
+}
+
+.order__coffee::before {
+  content: '';
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 132px;
+  height: 132px;
+  position: absolute;
+  top: -50%;
+  left: -2%;
+  z-index: 10;
+  background-image: url('..//..//images/products/coffee_tablet_mob.png');
+}
+
+.order__milkshakes::before {
+  content: '';
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 132px;
+  height: 132px;
+  position: absolute;
+  top: -50%;
+  left: -2%;
+  z-index: 10;
+  background-image: url('..//..//images/products/milkshake_tablet_mob.png');
+}
+
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .order__cream::before {
+    background-image: url('..//..//images/products/ice-cream_tablet_mob@2x.png');
+  }
+  .order__coffee::before {
+    background-image: url('..//..//images/products/coffee_tablet_mob@2x.png');
+  }
+  .order__milkshakes::before {
+    background-image: url('..//..//images/products/milkshake_tablet_mob@2x.png');
+  }
+}
+
+.order__text::after {
+  content: '';
+  width: 132px;
+  height: 132px;
+  position: absolute;
+  z-index: 9;
+  top: -45%;
+  left: -2%;
+
+  border-radius: 50%;
+}
+
+.order__cream::after {
+  background: linear-gradient(
+      0deg,
+      rgba(156, 190, 143, 0.7),
+      rgba(156, 190, 143, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 8px 30px rgba(10, 136, 23, 0.25);
+}
+
+.order__coffee::after {
+  background: linear-gradient(
+      0deg,
+      rgba(248, 210, 78, 0.7),
+      rgba(248, 210, 78, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+}
+
+.order__milkshakes::after {
+  background: linear-gradient(
+      0deg,
+      rgba(213, 117, 63, 0.7),
+      rgba(213, 117, 63, 0.7)
+    ),
+    #d9d9d9;
+  box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
 }
 
 .order-input {
