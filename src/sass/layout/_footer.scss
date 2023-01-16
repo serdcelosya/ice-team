@@ -1,5 +1,17 @@
 .footer {
   align-items: center;
+
+  @media screen and (max-width: 767px) {
+    padding-top: 1130px;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding-top: 390px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 636px;
+  }
 }
 
 .footer-container {

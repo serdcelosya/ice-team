@@ -34,6 +34,7 @@
   @media screen and (min-width: 768px) {
     width: 224px;
     margin-bottom: 0;
+    padding: 40px 24px;
   }
 
   @media screen and (min-width: 1200px) {
@@ -61,14 +62,21 @@
 
   border-radius: 4px;
 
-  @media screen and (min-width: 768px) {
-    padding: 4px 13px;
-    font-size: 16px;
-    line-height: 1.4;
-  }
+  // @media screen and (min-width: 768px) {
+  //   padding: 4px 13px;
+  //   font-size: 16px;
+  //   line-height: 1.4;
+  // }
 
   @media screen and (min-width: 768px) {
     padding: 4px 14px;
+    margin-bottom: 32px;
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 32px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 32px;
   }
 }
 
@@ -78,6 +86,11 @@
 
   margin-bottom: 24px;
   padding-bottom: 24px;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+  }
 
   &::after {
     position: absolute;
@@ -262,5 +275,30 @@
     justify-content: center;
     margin-top: 60px;
     margin-bottom: 120px;
+  }
+}
+
+.contacts {
+  position: relative;
+}
+
+.container-contact {
+  position: absolute;
+  z-index: 2;
+
+  left: 50%;
+  transform: translateX(-50%);
+  transform: translateY(-50%);
+
+  @media screen and (max-width: 767px) {
+    top: -355px;
+  }
+
+  @media screen and (min-width: 768px) {
+    top: -300px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    top: -125px;
   }
 }
