@@ -1,0 +1,69 @@
+<div class="backdrop is-hidden">
+  <div class="modal modal-franchise">
+    <button type="button" class="modal__btn">
+      <svg width="13" height="13" class="modal-icon__close">
+        <use href="./images/icons.svg#icon-close-modal"></use>
+      </svg>
+    </button>
+    <form class="modal-form">
+      <h3 class="form-title">
+        Thank you for your interest in owning an Ice Cream shop
+      </h3>
+      <p class="form-text">
+        Due to the overwhelming volume of franchise requests we are not
+        accepting new franchisee applications at this time. Once the application
+        process resumes, we will contact you for further information. Please
+        fill out the contact information below and we will reach out for
+        additional information. We appreciate your patience.
+      </p>
+      <div class="modal-input__group">
+        <label for="name"></label>
+        <input
+          type="text"
+          class="modal__input"
+          placeholder="Name"
+          name="name"
+          id="name"
+          required
+        />
+      </div>
+
+      <div class="modal-input__group">
+        <label for="tel"></label>
+        <input
+          type="tel"
+          class="modal__input"
+          placeholder="Phone"
+          name="tel"
+          id="tel"
+          title="+380631111111"
+          pattern="[\+]\d{3}\s[(]d{2}[\)]\s\d{3}[\]\d{2}[\]\d{2}"
+          required
+        />
+      </div>
+      <div class="modal-input__group">
+        <label for="email"></label>
+        <input
+          type="email"
+          class="modal__input"
+          placeholder="Email"
+          name="email"
+          id="email"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        />
+      </div>
+      <div class="modal-input__group modal__textarea">
+        <label for="comment"></label>
+        <textarea
+          name="comment"
+          id="comment"
+          class="modal__text"
+          placeholder="Comment"
+        ></textarea>
+      </div>
+      <div class="modal-submit__btn">
+        <button type="submit" class="modal__button">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
