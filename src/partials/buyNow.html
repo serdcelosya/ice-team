@@ -1,0 +1,94 @@
+<div class="backdrop-order is-hidden--buy active-mobile" data-modal-buy>
+  <div class="modal-order">
+    <button class="button-close-order" data-modal-close-1>
+      <svg class="button-close__icon" width="12" height="12">
+        <use href="./images/icons.svg#icon-close-modal"></use>
+      </svg>
+    </button>
+
+    <button class="button-close-order" data-modal-close-2>
+      <svg class="button-close__icon" width="12" height="12">
+        <use href="./images/icons.svg#icon-close-modal"></use>
+      </svg>
+    </button>
+
+    <form class="form-order">
+      <h2 class="order__title">Buy now</h2>
+      <!-- <ul class="order">
+        <li class="order__item order__item--cream">
+          <h3 class="order__text order__cream">ice cream</h3>
+        </li>
+        <li class="order__item order__item--coffee">
+          <h3 class="order__text order__coffee">ice coffee</h3>
+        </li>
+        <li class="order__item order__item--milkshakes">
+          <h3 class="order__text order__milkshakes">milkshakes</h3>
+        </li>
+      </ul> -->
+      <ul class="modal-list">
+        <li class="list-item">
+          <input
+            class="check-input"
+            type="checkbox"
+            name="product"
+            value="icecream"
+            id="icecream"
+          />
+          <label class="check-item check-item--first" for="icecream"
+            ><span class="check-item__text">ice cream</span></label
+          >
+        </li>
+        <li class="list-item">
+          <input
+            class="check-input"
+            type="checkbox"
+            name="product"
+            value="icecoffee"
+            id="icecoffee"
+          />
+          <label class="check-item check-item--second" for="icecoffee"
+            ><span class="check-item__text">ice coffee</span></label
+          >
+        </li>
+        <li class="list-item">
+          <input
+            class="check-input"
+            type="checkbox"
+            name="product"
+            value="milcshake"
+            id="milcshake"
+          />
+          <label class="check-item check-item--third" for="milcshake"
+            ><span class="check-item__text">milkshake</span></label
+          >
+        </li>
+      </ul>
+
+      <div class="order-input">
+        <div class="order-name">
+          <label for="name" class="order-name__label"></label>
+          <input id="name" class="order-name__input" placeholder="Name" />
+        </div>
+        <div class="order-phone">
+          <label for="telephon" class="order-phone__label"></label>
+          <input
+            id="telephon"
+            class="order-phone__input"
+            type="tel"
+            placeholder="Phone"
+          />
+        </div>
+        <div class="textarea-order">
+          <label class="textarea-order__label"></label>
+          <textarea
+            class="textarea-order__text"
+            placeholder="Comment"
+          ></textarea>
+          <div class="btn-buynow">
+            <button class="button-buy">Submit</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

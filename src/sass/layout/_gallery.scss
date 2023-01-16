@@ -4,7 +4,12 @@ img {
   height: auto;
 }
 
-.gallry--layout {
+.gallery__title {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.gallery--layout {
   position: relative;
   margin: 0 auto;
 }
@@ -49,10 +54,12 @@ img {
   @media screen and (min-width: 480px) and (max-width: 767px) {
     border-radius: 18px;
     height: 204px;
+    max-width: 440px;
   }
   @media screen and (min-width: 768px) and (max-width: 1199px) {
     border-radius: 18px;
     height: 327px;
+    widht: 704px;
   }
   @media screen and (min-width: 1200px) {
     width: 1013px;
@@ -63,12 +70,4 @@ img {
 .slick-next,
 .slick-prev {
   opacity: 0;
-}
-
-.section-above {
-  padding-top: 464px;
-  padding-bottom: 228px;
-  padding-left: 32px;
-  padding-right: 32px;
-  background-color: aliceblue;
 }

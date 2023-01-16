@@ -1,10 +1,25 @@
-<div class="backdrop is-hidden" data-modal>
-  <div class="modal">
-    <button type="button" class="modal-btn" data-modal-close>
-      <svg class="modal-btn-icon" width="18" height="18">
-        <use href="./images/icons.svg#icon-modal-close"></use>
-      </svg>
-    </button>
-    <p class="modal-title"></p>
+<div class="about-modal modal" data-modal="5">
+  <button type="button" class="about-modal-btn js-modal-close">
+    <svg class="about-modal-icon" width="24" height="24">
+      <use href="./images/icons.svg#icon-close-modal"></use>
+    </svg>
+  </button>
+  <p class="about-modal-title">How it’s made?</p>
+  <div class="about-video">
+    <iframe
+      width="100%"
+      height="100%"
+      src="https://www.youtube.com/embed/ew4ieEPa7kk"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+    ></iframe>
   </div>
+  <p class="about-modal-text">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+  </p>
 </div>
+<div class="about-backdrop js-overlay-modal"></div>

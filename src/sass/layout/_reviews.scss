@@ -4,45 +4,37 @@
   padding-bottom: 60px;
   background-image: url('/src/images/backgroud_mobile.jpg');
 
-
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
+    & {
+      background-image: url('/src/images/backgroud_mobile@2x.jpg');
+    }
+  }
+
+  @include tablet {
+    background-image: url('/src/images/background_tablet.jpg');
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
       & {
-        background-image: 
-          url('/src/images/backgroud_mobile@2x.jpg');
+        background-image: url('/src/images/background_tablet@2x.jpg');
       }
     }
-  
-    @include tablet {
-      background-image: 
-        url('/src/images/background_tablet.jpg');
-  
-      @media (min-device-pixel-ratio: 2),
+  }
+
+  @include desktop {
+    background-image: url('/src/images/background_desktop.jpg');
+
+    @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-        & {
-          background-image: 
-            url('/src/images/background_tablet@2x.jpg');
-        }
+      & {
+        background-image: url('/src/images/backgroud_desktop@2x.jpg');
       }
     }
-  
-    @include desktop {
-      background-image: 
-        url('/src/images/background_desktop.jpg');
-  
-      @media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-        & {
-          background-image: 
-            url('/src/images/backgroud_desktop@2x.jpg');
-        }
-      }
-    }
-
-
+  }
 }
 
 .customer-reviews_list {
@@ -57,41 +49,54 @@
   @media screen and (max-width: 480px) {
     padding-top: 256px;
   }
-  
- @media screen and (min-width: 768px) {
+
+  @media screen and (min-width: 768px) {
     padding-top: 283px;
   }
 
   @media screen and (min-width: 1200px) {
     padding-top: 464px;
   }
-
 }
-
 
 .customer-reviews_text {
   font-weight: 400;
   font-size: 12px;
   line-height: 2.5;
   color: #fcfcfc;
-  background-color: #84a178 ; 
+  background-color: #84a178;
   border-radius: 10px;
   margin-top: 32px;
   margin-bottom: 32px;
-  padding: 35px 39px 35px 39px;
+  padding: 35px 39px;
   text-align: center;
+  max-width: 280px;
+  height: 256px;
+  margin-left: auto;
+  margin-right: auto;
 
   @media screen and (min-width: 768px) {
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 705px;
+    height: 138px;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.8;
     padding: 28px 80px;
+    // padding-left: 80px;
+    // padding-right: 80px;
     border-radius: 24px;
   }
 
   @media screen and (min-width: 1200px) {
     font-size: 16px;
     padding: 43px 109px;
+    max-width: 968px;
+    height: 138px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -125,4 +130,18 @@
   text-align: center;
   opacity: 0.25;
   color: #84a178;
+}
+
+.customer-reviews {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 502px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 480px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 206px;
+  }
 }
