@@ -56,7 +56,15 @@
       <div class="order-input">
         <div class="order-name">
           <label for="name" class="order-name__label"></label>
-          <input id="name" class="order-name__input" placeholder="Name" />
+          <input
+            id="name"
+            class="order-name__input"
+            placeholder="Name"
+            minlength="3"
+            maxlength="20"
+            required
+            title="Некоректне ім'я"
+          />
         </div>
         <div class="order-phone">
           <label for="telephon" class="order-phone__label"></label>
@@ -65,6 +73,11 @@
             class="order-phone__input"
             type="tel"
             placeholder="Phone"
+            minlength="9"
+            maxlength="13"
+            pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+            required
+            title="+380 (63) 111-11-11"
           />
         </div>
         <div class="textarea-order">
@@ -74,7 +87,7 @@
             placeholder="Comment"
           ></textarea>
           <div class="btn-buynow">
-            <button class="button-buy">Submit</button>
+            <button class="button-buy" type="submit">Submit</button>
           </div>
         </div>
       </div>
