@@ -187,6 +187,10 @@
   left: 28%;
   min-width: 177px;
 
+  @media screen and (min-width: 480px) {
+    left: 35%;
+   }
+
   @media screen and (min-width: 768px) {
     left: 408px;
     bottom: 0;
