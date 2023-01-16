@@ -3,22 +3,23 @@
   width: 100%;
   height: 100%;
   top: 0;
-  background-color: transparent;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, .5);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &.is-hidden {
+  
     opacity: 0;
     visibility: hidden;
-    pointer-events: none;
     & .modal {
       transform: translate(-50%, -50%) scalex(0.5);
     }
   }
-}
+
 
 .about-modal {
-  position: absolute;
-
+  position: fixed;
+  opacity: 0;
+  visibility: hidden;
   min-width: 280px;
   min-height: 459px;
   padding: 28px;
@@ -27,6 +28,7 @@
   border-radius: 10px;
   top: 50%;
   left: 50%;
+  z-index: 30;
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--transform);
   overflow: auto;
@@ -35,18 +37,17 @@
     min-height: 449px;
     padding: 32px 60px;
   }
-  //   @include mobile {
-  //     width: 450px;
-  //   }
-  //   @include desktop {
-  //     width: 528px;
-  //     height: 581px;
-  //   }
+  
+}
+.modal.active,
+.about-backdrop.active{
+   opacity: 1;
+   visibility: visible;
 }
 .about-modal-btn {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 50%;
@@ -57,14 +58,16 @@
   justify-content: center;
   cursor: pointer;
 }
-// .about-modal-icon {
-// }
+.about-modal-icon {
+  fill: currentColor;
+  width: 24px;
+  height: 24px;
+}
 .about-modal-title {
   font-family: 'Seymour One', sans-serif;
 
   font-size: 16px;
   line-height: 1.5;
-  //   margin: 0 auto;
   margin-bottom: 20px;
   align-items: center;
   text-align: center;
