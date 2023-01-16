@@ -9,12 +9,32 @@
           alt="Logo"
         />
       </a>
-      <button
-        type="button"
-        class="menu-button"
+      <ul class="site-nav">
+        <li class="site-nav__item">
+          <a href="#header" class="site-nav__link"
+            >Home</a
+          >
+        </li>
+        <li class="site-nav__item">
+          <a href="#about" class="site-nav__link" 
+            >How it’s made?</a
+          >
+        </li>
+        <li class="site-nav__item">
+          <a href="#products" class="site-nav__link" 
+            >Our products</a
+          >
+        </li>
+        <li class="site-nav__item">
+          <a href="#contacts" class="site-nav__link" 
+            >Contact</a
+          >
+        </li>
+      </ul>
+        <button
+        class="menu-toggle js-open-menu"
         aria-expanded="false"
         aria-controls="mobile-menu"
-        data-menu-button
       >
         <svg
           width="32"
@@ -23,52 +43,16 @@
           aria-label="Кнопка мобільного меню"
         >
           <use
-            class="menu-button__icon-close"
-            href="./images/icons.svg#icon-close"
-          ></use>
-          <use
-            class="menu-button__icon-menu"
-            href="./images/icons.svg#icon-menu"
+          class="menu-button__icon-menu"
+          href="./images/icons.svg#icon-menu"
+
           ></use>
         </svg>
+        
       </button>
-      <div class="main-nav__wrapper" id="mobile-menu" data-menu>
-        <ul class="site-nav">
-          <li class="site-nav__item">
-            <a href="#header" class="site-nav__link" data-menu-link
-              >Home</a
-            >
-          </li>
-          <li class="site-nav__item">
-            <a href="#about" class="site-nav__link" data-menu-link
-              >How it’s made?</a
-            >
-          </li>
-          <li class="site-nav__item">
-            <a href="#products" class="site-nav__link" data-menu-link
-              >Our products</a
-            >
-          </li>
-          <li class="site-nav__item">
-            <a href="#contacts" class="site-nav__link" data-menu-link
-              >Contact</a
-            >
-          </li>
-        </ul>
         <button
-          type="button"
-          class="header-button header-button--tablet-disabled"
-          data-modal-open
-        >
-          Buy now
-          <svg class="header-button__icon">
-            <use href="./images/icons.svg#icon-arrow-right"></use>
-          </svg>
-        </button>
-      </div>
-      <button
         type="button"
-        class="header-button header-button--mobile-disabled "
+        class="header-button header-button--disabled"
         data-modal-open
       >
         Buy now
@@ -76,6 +60,55 @@
           <use href="./images/icons.svg#icon-arrow-right"></use>
         </svg>
       </button>
+
+           <!-- Mobile-menu-->
+      <div
+        class="menu-container nav__menu-container js-menu-container"
+        id="mobile-menu"
+      >
+      <div class="mobile__container">
+          <a href="./index.html" class="logo" widthg="48px" height="44px">
+            <img
+              class="logo__image"
+              srcset="./images/logo/logo.png ./images/logo/logo@2x.png"
+              src="./images/logo/logo.png"
+              alt="Logo"
+            />
+          </a>
+        <button class="menu-toggle js-close-menu">
+          <svg width="32" height="32">
+            <use
+            class="menu-button__icon-close"
+            href="./images/icons.svg#icon-close"
+            ></use>
+          </svg>
+        </button>
+      </div>
+        <ul class="menu-site__list">
+          <li class="menu-site__item">
+            <a href="#header" class="menu-site__link">Home</a>
+          </li>
+          <li class="menu-site__item">
+            <a href="#about" class="menu-site__link">How it’s made?</a>
+          </li>
+          <li class="menu-site__item">
+            <a href="#products" class="menu-site__link">Our products</a>
+          </li>
+          <li class="menu-site__item">
+            <a href="#contacts" class="menu-site__link">Contact</a>
+          </li>
+        </ul>
+        <button
+          type="button"
+          class="mobile_button"
+          data-modal-open
+        >
+          Buy now
+          <svg class="mobile_button__icon">
+            <use href="./images/icons.svg#icon-arrow-right"></use>
+          </svg>
+        </button>
+      </div>
     </nav>
   </div>
 </header>
