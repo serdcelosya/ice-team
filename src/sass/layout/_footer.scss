@@ -138,6 +138,11 @@
   height: 100%;
   border-radius: 50%;
   background-color: var(--btn-color-default);
+
+  &:hover .footer-soc__icons,
+  &:focus .footer-soc__icons {
+    fill: var(--text-whte);
+  }
 }
 
 .footer-soc__icons {

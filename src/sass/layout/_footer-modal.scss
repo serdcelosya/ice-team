@@ -1,73 +1,125 @@
-.backdrop {
+.franchise__overlay {
+  /* Скрываем подложку  */
+  opacity: 0;
+  visibility: hidden;
+
   position: fixed;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  transition: 0.3s all;
 }
 
-.backdrop.is-hidden {
-  opacity: 1;
+/* Стили для модальных окон */
+
+.franchise__modal {
+  /* Скрываем окна  */
+  opacity: 0;
   visibility: hidden;
-  pointer-events: none;
-}
 
-.backdrop.is-hidden .modal-franchise {
-  // transform: translate(100%);
-  transform: translate(-50%, -50%);
-}
+  @media screen and (max-width: 767px) {
+    /*  Установаем ширину окна  */
+    max-width: 280px;
+    padding: 28px 28px;
+  }
 
-.modal-franchise {
-  position: absolute;
-  padding: 32px 60px;
-  width: 568px;
-  height: 668px;
+  @media screen and (min-width: 768px) {
+    /*  Установаем ширину окна  */
+    width: 568px;
+    padding: 32px 60px;
+  }
+
+  /*  Центрируем и задаем z-index */
+  position: fixed;
   top: 50%;
   left: 50%;
-  border-radius: 10px;
   transform: translate(-50%, -50%);
-  background-color: var(--text-whte);
+  z-index: 30; /* Должен быть выше чем у подложки*/
+
+  /*  Побочные стили   */
+  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+
+  background: var(--text-whte);
+  border: 2px solid #f8d24e;
+  border-radius: 10px;
+  transition: 0.3s all;
 }
 
+/* Стили для активных классов подложки и окна */
+
+.franchise__modal.active,
+.franchise__overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Стили для кнопки закрытия */
+
 .modal__btn {
+  padding: 0;
   position: absolute;
-  top: 12px;
-  right: 12px;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 24px;
-  height: 24px;
-  border: none;
+
   cursor: pointer;
+
   background-color: inherit;
+  border: none;
+
+  @media screen and (max-width: 767px) {
+    top: 14px;
+    right: 14px;
+    width: 16px;
+    height: 16px;
+  }
+
+  @media screen and (min-width: 768px) {
+    top: 12px;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+  }
 }
 
-.modal-form {
+.franchise-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.form-title {
-  font-family: 'Seymour One';
-  margin-bottom: 24px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: calc(28 / 20);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-left: 63px;
-  padding-right: 63px;
-  color: #131313;
+.franchise-title {
+  @media screen and (max-width: 767px) {
+    width: 221px;
+    font-family: 'Seymour One';
+    display: flex;
+    font-size: 16px;
+    line-height: calc(22 / 15);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: var(--text-black);
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 20px;
+    line-height: calc(28 / 20);
+    width: 270px;
+    margin-bottom: 24px;
+  }
 }
 
-.form-text {
+.franchise-text {
+  text-align: left;
   font-family: 'Montserrat';
   font-weight: 400;
   font-size: 15px;
@@ -76,16 +128,30 @@
   margin-bottom: 32px;
 }
 
-.modal-input__group {
-  margin-bottom: 16px;
+.franchise-input__group {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 12px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 16px;
+  }
 }
 
-.modal__input {
+.franchise__input {
+  @media screen and (max-width: 767px) {
+    max-width: 224px;
+    height: 32px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 368px;
+    height: 42px;
+  }
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 368px;
-  height: 42px;
+
   border: 1px solid #84a178;
   border-radius: 10px;
   padding: 11px 16px;
@@ -94,28 +160,38 @@
   outline: none;
 }
 
-.modal__input::placeholder {
+.franchise__input::placeholder {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: calc(20 / 14);
+  font-size: 12px;
+  line-height: calc(17 / 12);
   color: var(--text-black);
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: calc(20 / 14);
+  }
 }
 
-.modal__text {
+.franchise__text {
   resize: none;
   background-color: rgba(248, 210, 78, 0.1);
   border: 1px solid #84a178;
   border-radius: 10px;
   outline: none;
-  width: 368px;
-  height: 84px;
+  width: 224px;
+  height: 64px;
   resize: none;
-  padding: 16px 11px;
+  padding: 8px 12px;
+
+  @media screen and (min-width: 768px) {
+    width: 368px;
+    height: 84px;
+    padding: 16px 11px;
+  }
 }
 
-.modal__text::placeholder {
+.franchise__text::placeholder {
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
@@ -124,17 +200,17 @@
   color: var(--text-black);
 }
 
-.modal__textarea {
+.franchise__textarea {
   margin-bottom: 32px;
 }
 
-.modal-submit__btn {
+.franchise-submit__btn {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.modal__button {
+.franchise__button {
   padding: 12px 34px;
   font-family: 'Montserrat';
   font-style: normal;
