@@ -96,11 +96,11 @@
 
 .franchise-title {
   @media screen and (max-width: 767px) {
-    width: 221px;
+    width: 225px;
     font-family: 'Seymour One';
     display: flex;
     font-size: 16px;
-    line-height: calc(22 / 15);
+    line-height: calc(24 / 16);
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -111,9 +111,10 @@
   }
 
   @media screen and (min-width: 768px) {
+    font-family: 'Seymour One';
     font-size: 20px;
     line-height: calc(28 / 20);
-    width: 270px;
+    max-width: 322px;
     margin-bottom: 24px;
   }
 }
@@ -122,10 +123,17 @@
   text-align: left;
   font-family: 'Montserrat';
   font-weight: 400;
-  font-size: 15px;
-  line-height: calc(21 / 15);
+  font-size: 13px;
+  line-height: calc(20 / 13);
   color: var(--text-black);
-  margin-bottom: 32px;
+  margin-bottom: 24px;
+
+  @media screen and (min-width: 768px) {
+    width: 448px;
+    margin-bottom: 32px;
+    font-size: 15px;
+    line-height: calc(21 / 15);
+  }
 }
 
 .franchise-input__group {
@@ -195,13 +203,22 @@
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: calc(20 / 14);
+  font-size: 12px;
+  line-height: calc(17 / 12);
   color: var(--text-black);
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: calc(20 / 14);
+  }
 }
 
 .franchise__textarea {
-  margin-bottom: 32px;
+  margin-bottom: 24px;
+
+  @media screen and(min-width:768px) {
+    margin-bottom: 32px;
+  }
 }
 
 .franchise-submit__btn {
@@ -211,16 +228,22 @@
 }
 
 .franchise__button {
+  border: transparent;
   padding: 12px 34px;
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
-  font-size: 14px;
-  line-height: calc(17 / 14);
+  font-size: 12px;
+  line-height: calc(15 / 12);
   display: flex;
   align-items: center;
   text-align: center;
   color: var(--text-black);
   background-color: var(--btn-color-default);
   border-radius: 10px;
+
+  @media screen and(min-width:768px) {
+    font-size: 14px;
+    line-height: calc(17 / 14);
+  }
 }
