@@ -62,12 +62,6 @@
 
   border-radius: 4px;
 
-  // @media screen and (min-width: 768px) {
-  //   padding: 4px 13px;
-  //   font-size: 16px;
-  //   line-height: 1.4;
-  // }
-
   @media screen and (min-width: 768px) {
     padding: 4px 14px;
     margin-bottom: 32px;
@@ -266,6 +260,7 @@
 
 .location-button {
   display: flex;
+  align-items: center;
   @media screen and (max-width: 767px) {
     flex-direction: column;
     margin-top: 20px;
