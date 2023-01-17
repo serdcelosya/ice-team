@@ -1,0 +1,15 @@
+.back-to-top {
+  background: var(--btn-color-default);
+  border-radius: 50%;
+  position: fixed;
+  bottom: -50px;
+  padding: 10px 12px;
+  right: 50px;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+
+.back-to-top.active {
+  bottom: 50px;
+  transition: 0.3s all;
+}
