@@ -1,4 +1,3 @@
-<!------- first modal ----- -->
 <div class="modal products-modal products-modal-first" data-modal="2">
   <button type="button" class="products-modal-close js-modal-close">
     <svg class="products-modal-icon">
@@ -53,12 +52,21 @@
       name="name"
       placeholder="Name"
       class="products-modal-input"
+      minlength="3"
+      maxlength="20"
+      required
+      title="Некоректне ім'я"
     />
     <input
       type="tel"
       name="tel"
       placeholder="Phone"
       class="products-modal-input"
+      minlength="9"
+      maxlength="15"
+      pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}"
+      required
+      title="+380 (63) 111-11-11"
     />
     <textarea
       name="comment"
@@ -68,7 +76,7 @@
     <button type="submit" class="products-modal-btn">Submit</button>
   </form>
 </div>
-<!------- second modal ------->
+
 <div class="modal products-modal" data-modal="3">
   <button type="button" class="products-modal-close js-modal-close">
     <svg class="products-modal-icon">
@@ -144,7 +152,7 @@
     <button type="submit" class="products-modal-btn">Submit</button>
   </form>
 </div>
-<!------- third modal ------->
+
 <div class="modal products-modal products-modal-third" data-modal="4">
   <button type="button" class="products-modal-close js-modal-close">
     <svg class="products-modal-icon">

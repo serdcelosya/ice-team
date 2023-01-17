@@ -1,9 +1,3 @@
-// .products-backdrop.is-hidden .products-modal {)
-//   transform: translate(-50%, -50%) scale(0.8);
-// }
-
-/* Стили для подложки */
-
 .products-opacity {
   opacity: 0;
   visibility: hidden;
@@ -353,6 +347,11 @@
   font-size: 14px;
   line-height: 1.4;
   color: #131313;
+}
+
+.products-modal-input:focus,
+.products-modal-textarea:focus {
+  outline: none;
 }
 
 .products-modal-btn {
