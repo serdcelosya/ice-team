@@ -218,6 +218,7 @@
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 16px;
+  cursor: pointer;
   &:hover {
     border-color: var(--btn-color-hover-focus);
     background-color: var(--btn-color-hover-focus);
@@ -246,6 +247,7 @@
   font-weight: 600;
   line-height: 1.2;
   background-color: var(--bgc-body);
+  cursor: pointer;
   &:focus {
     border-color: var(--btn-color-hover-focus);
     color: var(--btn-text-color);
