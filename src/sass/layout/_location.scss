@@ -1,174 +1,170 @@
 /* Стили для подложки */
 
 .location__overlay {
-   
-    /* Скрываем подложку  */
-    opacity: 0;
-    visibility: hidden;
-    
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .5);
-    z-index: 20;
-    transition: .3s all;
- }
- 
- 
- /* Стили для модальных окон */
- 
- .location__modal {
-    
-    /* Скрываем окна  */
-    opacity: 0;
-    visibility: hidden;
-    
-    @media screen and (max-width: 767px) {
-      /*  Установаем ширину окна  */
-      max-width: 280px;
-      padding: 28px 28px;
-      }
-  
-    @media screen and (min-width: 768px) {
-     /*  Установаем ширину окна  */
-     width: 568px;
-     padding: 32px 60px;
-      }
-    
-    /*  Центрируем и задаем z-index */
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 30; /* Должен быть выше чем у подложки*/
-    
-    /*  Побочные стили   */
-    box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2); 
-    text-align: center;
-   
-    background: var(--text-whte);
-    border-radius: 10px;
-    border: 2px solid #F8D24E;
-    transition: 0.3s all;
- }
- 
- 
- /* Стили для активных классов подложки и окна */
- 
- .location__modal.active,
- .location__overlay.active{
-    opacity: 1;
-    visibility: visible;
- }
- 
- 
- /* Стили для кнопки закрытия */
- 
- .location__close {
-    padding: 0;
-    position: absolute;
+  /* Скрываем подложку  */
+  opacity: 0;
+  visibility: hidden;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  transition: 0.3s all;
+}
 
-    cursor: pointer;
+/* Стили для модальных окон */
 
-    background-color: inherit;
-    border: none;
+.location__modal {
+  /* Скрываем окна  */
+  opacity: 0;
+  visibility: hidden;
 
-    @media screen and (max-width: 767px) {
-      top: 14px;
-      right: 14px;
-      width: 16px;
-      height: 16px;
-       }
-   
-    @media screen and (min-width: 768px) {
-      top: 12px;
-      right: 12px;
-      width: 24px;
-      height: 24px;
-       }
-   }
-
- .location__wrap {
-   justify-content: center;
-   align-items: center;
- }
- 
- /* Стили для заголовка */
- .location__title {
-    
-    font-family: 'Seymour One';
-    font-style: normal;
-    font-weight: 400;
-    align-items: center;
-    text-align: center;
-    color: var(--text-black);
-
-    @media screen and (max-width: 767px) {
-      margin-bottom: 20px;
-      font-size: 16px;
-      line-height: calc(24/16);
-       }
-   
-    @media screen and (min-width: 768px) {
-      margin-bottom: 32px;
-      font-size: 20px;
-      line-height: calc(28/20);
-       }  
- }
-
- .location__map{
-    border-radius: 10px;
- }
-
-  .mobile-map{
-   @media screen and (max-width: 767px) {
-      max-width: 224px;
-      max-height: 199px;
-       }
-  
-   @media screen and (min-width: 768px) {
-      display: none;
-      }
+  @media screen and (max-width: 767px) {
+    /*  Установаем ширину окна  */
+    max-width: 280px;
+    padding: 28px 28px;
   }
 
-  .desktop-map{
-   @media screen and (max-width: 767px) {
-   display: none;
-       }
-  
-   @media screen and (min-width: 768px) {
-     width: 448px;
-     height: 260px;
-      }
+  @media screen and (min-width: 768px) {
+    /*  Установаем ширину окна  */
+    width: 568px;
+    padding: 32px 60px;
   }
- /* Стили для кнопки */
- .location__open-map{
-    padding: 12px 34px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 600;
-    align-items: center;
-    text-align: center;
-    color: var(--text-black);
-    background:var(--btn-color-default);
-    border-radius: 10px;
-    border-color: transparent;
 
-    @media screen and (max-width: 767px) {
-      margin-top: 24px;
-      font-size: 12px;
-      line-height: 15px;
-       }
-   
-    @media screen and (min-width: 768px) {
-      margin-top: 32px;
-      font-size: 14px;
-      line-height: 17px;
-       }
- }
+  /*  Центрируем и задаем z-index */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30; /* Должен быть выше чем у подложки*/
+
+  /*  Побочные стили   */
+  box-shadow: 0 3px 10px -0.5px rgba(0, 0, 0, 0.2);
+  text-align: center;
+
+  background: var(--text-whte);
+  border-radius: 10px;
+  border: 2px solid #f8d24e;
+  transition: 0.3s all;
+}
+
+/* Стили для активных классов подложки и окна */
+
+.location__modal.active,
+.location__overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Стили для кнопки закрытия */
+
+.location__close {
+  padding: 0;
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  background-color: inherit;
+  border: none;
+
+  @media screen and (max-width: 767px) {
+    top: 14px;
+    right: 14px;
+    width: 16px;
+    height: 16px;
+  }
+
+  @media screen and (min-width: 768px) {
+    top: 12px;
+    right: 12px;
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.location__wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Стили для заголовка */
+.location__title {
+  font-family: 'Seymour One';
+  font-style: normal;
+  font-weight: 400;
+  align-items: center;
+  text-align: center;
+  color: var(--text-black);
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: calc(24 / 16);
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 32px;
+    font-size: 20px;
+    line-height: calc(28 / 20);
+  }
+}
+
+.location__map {
+  border-radius: 10px;
+}
+
+.mobile-map {
+  @media screen and (max-width: 767px) {
+    max-width: 224px;
+    max-height: 199px;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.desktop-map {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 448px;
+    height: 260px;
+  }
+}
+/* Стили для кнопки */
+.location__open-map {
+  padding: 12px 34px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  align-items: center;
+  text-align: center;
+  color: var(--text-black);
+  background: var(--btn-color-default);
+  border-radius: 10px;
+  border-color: transparent;
+
+  @media screen and (max-width: 767px) {
+    margin-top: 24px;
+    font-size: 12px;
+    line-height: 15px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-top: 32px;
+    font-size: 14px;
+    line-height: 17px;
+  }
+}
